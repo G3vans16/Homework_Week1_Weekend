@@ -171,8 +171,8 @@ def customer_can_afford_pet(customer, pet):
     #     self.assertEqual(100, get_customer_cash(customer))
     #     self.assertEqual(1900, get_total_cash(self.cc_pet_shop))
 def get_pet_cost(pet_shop, pet):
-    return pet["price"]
-    if find_pet_by_name(pet_shop, pet) == None:
+    # return pet["price"]
+    if find_pet_by_name(pet_shop, pet["name"]) == None:
         print(find_pet_by_name(pet_shop, pet))
         return 0
     else: return pet["price"]
