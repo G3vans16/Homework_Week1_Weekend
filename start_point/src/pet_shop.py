@@ -181,10 +181,10 @@ def sell_pet_to_customer(pet_shop, pet, customer):
     # pet_cost = pet["price"]
     original_stock = get_stock_count(pet_shop)
     pet_cost = get_pet_cost(pet_shop, pet)
-    print(pet_cost)
+    # print(pet_cost)
 
     add_pet_to_customer(customer, pet)
-    # remove_pet_by_name(pet_shop, pet)
+    remove_pet_by_name(pet_shop, pet["name"])
     increase_pets_sold(pet_shop, (original_stock - get_stock_count(pet_shop)))
     remove_customer_cash(customer, pet_cost)
     add_or_remove_cash(pet_shop, pet_cost)
